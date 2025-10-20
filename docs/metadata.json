@@ -1,0 +1,47 @@
+{
+  "Types": {
+    "Query": {
+      "fields": {
+        "draftOrders": {
+          "arguments": {
+            "subscriptionId": { "examples": ["sub_coterie_diapers_and_balm"] },
+            "nextN": { "example": 5 }
+          }
+        }
+      }
+    },
+    "Mutation": {
+      "fields": {
+        "updateDraftOrder": {
+          "arguments": {
+            "input": {
+              "example": {
+                "draftOrderId": "draft_sub_cot_2",
+                "edits": [
+                  { "action": "UPDATE", "draftLineId": "draftline_diaper", "quantity": 2 },
+                  { "action": "ADD", "variantId": "var_balm_100ml", "quantity": 1 }
+                ]
+              }
+            }
+          }
+        },
+        "skipNextOrder": {
+          "arguments": {
+            "subscriptionId": { "example": "sub_coterie_diapers_and_balm" }
+          }
+        }
+      }
+    },
+    "InputObject": {
+      "UpdateDraftOrderInput": {
+        "fields": {
+          "edits": {
+            "example": [
+              { "action": "UPDATE", "draftLineId": "draftline_diaper", "quantity": 2 }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

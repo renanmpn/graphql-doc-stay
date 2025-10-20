@@ -1,0 +1,6 @@
+# examples/mutations/update-draft-order.graphql
+mutation UpdateDraft($input: UpdateDraftOrderInput!) {
+  updateDraftOrder(input: $input) {
+    draftOrderId
+  }
+}

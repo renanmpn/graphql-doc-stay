@@ -1,0 +1,10 @@
+introspection:
+  removeTrailingPeriodFromDescriptions: false
+  url: http://localhost:4000/graphql
+  metadata: ./docs/metadata.json
+
+info:
+  title: "StayAI GraphQL API"
+  description: "Reference documentation for our GraphQL schema."
+
+outputDir: ./public

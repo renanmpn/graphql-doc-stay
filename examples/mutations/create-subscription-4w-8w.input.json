@@ -1,0 +1,32 @@
+{
+  "input": {
+    "merchantId": "mrc_coterie",
+    "customerId": "cus_coterie_001",
+    "frequency": { "value": 4, "unit": "WEEK" },
+    "anchors": [{ "day": 1, "month": 0, "type": "BILLING" }],
+    "address": {
+      "name": "Anna Customer",
+      "line1": "123 Coterie Ave",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10001",
+      "countryCode": "US",
+      "phone": "+12125550123"
+    },
+    "lines": [
+      {
+        "variantId": "var_diaper",
+        "quantity": 1,
+        "isOneTime": false
+      },
+      {
+        "variantId": "var_cream",
+        "quantity": 1,
+        "isOneTime": false,
+        "deliveryCadence": { "everyXOrders": 2, "isActive": true }
+      }
+    ],
+    "paymentMethodId": "pm_coterie_visa_001",
+    "discountCodes": ["WELCOME10"]
+  }
+}

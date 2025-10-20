@@ -1,0 +1,34 @@
+query CustomerByEmail($email: String!) {
+  customerBy(filter: { email: $email }) {
+    id
+    email
+    firstName
+    lastName
+    merchant { id name shopName }
+    subscriptions(first: 10) {
+      edges {
+        cursor
+        node {
+          id
+          status
+          nextBillingDate
+          currencyCode
+        }
+      }
+      pageInfo { hasNextPage endCursor }
+      errors { message code }
+    }
+    paymentMethods(first: 10) {
+      edges {
+        node {
+          id
+          instrument
+          source
+          card { brand last4 expMonth expYear }
+          paypal { accountEmail }
+        }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+}

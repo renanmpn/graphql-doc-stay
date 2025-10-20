@@ -1,0 +1,18 @@
+query SubscriptionForecast($subscriptionId: ID!) {
+  subscriptionForecast(subscriptionId: $subscriptionId, nextN: 5) {
+    subscriptionId
+    entries {
+      billingDate
+      deliveryDate
+      projectedTotalPrice
+      notes
+      lines {
+        lineId
+        willShip
+        reason
+        quantity
+        variant { id title }
+      }
+    }
+  }
+}

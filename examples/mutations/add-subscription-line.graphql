@@ -1,0 +1,6 @@
+mutation AddSubscriptionLine($subscriptionId: ID!, $lines: [CreateSubscriptionLineInput!]!) {
+  addSubscriptionLines(subscriptionId: $subscriptionId, lines: $lines) {
+    lineId
+    subscriptionId
+  }
+}

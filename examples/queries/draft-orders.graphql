@@ -1,0 +1,19 @@
+# examples/queries/draft-orders.graphql
+query DraftOrders($subscriptionId: ID!) {
+  draftOrders(subscriptionId: $subscriptionId, nextN: 2) {
+    id
+    cycleIndex
+    billingDate
+    projectedTotalPrice
+    lines {
+      id
+      title
+      variantTitle
+      variantImage
+      sku
+      quantity
+      isOneTime
+      pricing { originalUnitPrice discountedUnitPrice }
+    }
+  }
+}

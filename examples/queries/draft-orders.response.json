@@ -1,0 +1,52 @@
+{
+  "data": {
+    "draftOrders": [
+      {
+        "id": "draft_sub_cot_0",
+        "cycleIndex": 0,
+        "billingDate": "2025-11-03T10:00:00Z",
+        "projectedTotalPrice": 64.5,
+        "lines": [
+          {
+            "id": "draftline_diaper",
+            "title": "Coterie Diapers",
+            "variantTitle": "Size 3",
+            "variantImage": "https://cdn.coterie.com/images/diaper-sz3.png",
+            "sku": "DIAP-003",
+            "quantity": 1,
+            "isOneTime": false,
+            "pricing": { "originalUnitPrice": 45.0, "discountedUnitPrice": 40.5 }
+          },
+          {
+            "id": "draftline_balm",
+            "title": "Coterie Baby Balm",
+            "variantTitle": "100ml",
+            "variantImage": "https://cdn.coterie.com/images/balm-100.png",
+            "sku": "BALM-100",
+            "quantity": 1,
+            "isOneTime": false,
+            "pricing": { "originalUnitPrice": 30.0, "discountedUnitPrice": 24.0 }
+          }
+        ]
+      },
+      {
+        "id": "draft_sub_cot_1",
+        "cycleIndex": 1,
+        "billingDate": "2025-12-01T10:00:00Z",
+        "projectedTotalPrice": 40.5,
+        "lines": [
+          {
+            "id": "draftline_diaper",
+            "title": "Coterie Diapers",
+            "variantTitle": "Size 3",
+            "variantImage": "https://cdn.coterie.com/images/diaper-sz3.png",
+            "sku": "DIAP-003",
+            "quantity": 1,
+            "isOneTime": false,
+            "pricing": { "originalUnitPrice": 45.0, "discountedUnitPrice": 40.5 }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "input": {
+    "draftOrderIndex": 2,
+    "edits": [
+      { "action": "UPDATE", "draftLineId": "draftline_diaper", "quantity": 2 },
+      { "action": "ADD", "variantId": "var_balm_100ml", "quantity": 1 }
+    ]
+  }
+}

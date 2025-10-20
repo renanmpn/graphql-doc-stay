@@ -1,0 +1,9 @@
+{
+  "input": {
+    "lineId": "line_mask_every_12_cycles",
+    "deliveryCadence": {
+      "everyXOrders": 3,
+      "isActive": true
+    }
+  }
+}

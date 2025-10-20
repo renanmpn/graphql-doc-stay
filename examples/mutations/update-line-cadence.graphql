@@ -1,0 +1,6 @@
+mutation UpdateLineCadence($input: UpdateSubscriptionLineInput!) {
+  updateSubscriptionLine(input: $input) {
+    lineId
+    subscriptionId
+  }
+}

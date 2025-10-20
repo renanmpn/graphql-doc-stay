@@ -1,0 +1,33 @@
+query SubscriptionDetail($id: ID!) {
+  subscription(id: $id) {
+    id
+    status
+    currencyCode
+    nextBillingDate
+    frequency { value unit }           # anchor cadence for the whole subscription
+    anchors { day month type }
+
+    discounts { code }
+
+    paymentMethod {
+      id
+      instrument
+      card { brand last4 expMonth expYear }
+    }
+
+    lines {
+      id
+      title
+      quantity
+      isOneTime
+      pricing { currentPrice discountedPrice }
+      # If a line follows the subscription cadence, deliveryCadence may be null.
+      deliveryCadence {
+        everyXOrders
+        remainingCycles
+        isActive
+      }
+      variant { id title }
+    }
+  }
+}

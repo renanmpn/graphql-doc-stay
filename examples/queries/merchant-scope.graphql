@@ -1,0 +1,27 @@
+query MerchantScope($merchantId: ID!) {
+  merchant(id: $merchantId) {
+    id
+    name
+    shopName
+    customers(first: 5) {
+      edges { node { id email firstName lastName } }
+      pageInfo { hasNextPage endCursor }
+      errors { message code }
+    }
+    subscriptions(
+      filter: { statuses: [ACTIVE], minNextBillingDate: "2025-11-01T00:00:00Z" }
+      first: 10
+    ) {
+      edges {
+        node {
+          id
+          status
+          nextBillingDate
+          customer { email }
+          discounts { code }
+        }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "data": {
+    "subscription": {
+      "id": "sub_coterie_4w_8w_anna",
+      "status": "ACTIVE",
+      "currencyCode": "USD",
+      "nextBillingDate": "2025-11-03T10:00:00Z",
+      "frequency": { "value": 4, "unit": "WEEK" },
+      "anchors": [
+        { "day": 1, "month": 0, "type": "BILLING" }
+      ],
+
+      "discounts": [
+        { "code": "WELCOME10" }
+      ],
+
+      "paymentMethod": {
+        "id": "pm_coterie_visa_001",
+        "instrument": "CREDIT_CARD",
+        "card": { "brand": "VISA", "last4": "4242", "expMonth": 12, "expYear": 2030 }
+      },
+
+      "lines": [
+        {
+          "id": "line_serum_every_cycle",
+          "title": "Coterie Skin Care – Daily Serum",
+          "quantity": 1,
+          "isOneTime": false,
+          "pricing": { "currentPrice": 39.0, "discountedPrice": 35.1 },
+          "deliveryCadence": null,
+          "variant": { "id": "var_skin_care_serum", "title": "30ml" }
+        },
+        {
+          "id": "line_mask_every_2_cycles",
+          "title": "Coterie Skin Care – Hydrating Mask",
+          "quantity": 1,
+          "isOneTime": false,
+          "pricing": { "currentPrice": 29.0, "discountedPrice": 26.1 },
+          "deliveryCadence": {
+            "everyXOrders": 2,
+            "remainingCycles": 0,
+            "isActive": true
+          },
+          "variant": { "id": "var_skin_care_mask", "title": "100ml" }
+        }
+      ]
+    }
+  }
+}
