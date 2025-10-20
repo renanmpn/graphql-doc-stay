@@ -373,6 +373,7 @@ input CreateSubscriptionInput {
   discountCodes: [String!]
   customAttributes: JSON
   gift: GiftInput
+  sponsorship: SponsorshipInput
 }
 
 input UpdateSubscriptionInput {
@@ -400,6 +401,18 @@ input UpdateCustomerInput {
   firstName: String
   lastName: String
   phone: String
+}
+
+input PersonContactInput {
+  firstName: String
+  lastName: String
+  email: String
+}
+
+input SponsorshipInput {
+  gifter: PersonContactInput!
+  giftee: PersonContactInput!
+  message: String
 }
 
 """
@@ -900,6 +913,31 @@ type Subscription {
 
   """Discount codes applied to this subscription."""
   discounts: [Discount!]!
+
+  """
+  Persistent sponsorship info when this subscription is bought for someone else.
+  Billing follows the payer; shipments target the recipient.
+  """
+  sponsorship: Sponsorship
+}
+
+"""
+Minimal person contact used for sponsorship (gifted subscriptions).
+"""
+type PersonContact {
+  firstName: String
+  lastName: String
+  email: String
+}
+
+"""
+Persistent sponsorship when a subscription is purchased for someone else.
+Billing/ownership semantics are internal; this only stores who gifts and who receives.
+"""
+type Sponsorship {
+  gifter: PersonContact!
+  giftee: PersonContact!
+  message: String
 }
 
 """Cancellation metadata grouped for clarity and optionality.

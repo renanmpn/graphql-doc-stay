@@ -27,6 +27,19 @@
       }
     ],
     "paymentMethodId": "pm_coterie_visa_001",
-    "discountCodes": ["WELCOME10"]
+    "discountCodes": ["WELCOME10"],
+    "sponsorship": {
+      "gifter": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "email": "john.smith@example.com"
+      },
+      "giftee": {
+        "firstName": "Anna",
+        "lastName": "Customer",
+        "email": "anna.customer@example.com"
+      },
+      "message": "Surprise! Enjoy your Coterie subscription :gift_heart:"
+    }
   }
 }
